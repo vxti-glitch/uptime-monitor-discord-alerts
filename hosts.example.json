@@ -1,0 +1,12 @@
+{
+  "hosts": [
+    {
+      "name": "Gateway",
+      "host": "192.168.1.1"
+    },
+    {
+      "name": "Public DNS",
+      "host": "1.1.1.1"
+    }
+  ]
+}
