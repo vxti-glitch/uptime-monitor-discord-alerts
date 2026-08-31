@@ -1,10 +1,12 @@
 # Uptime Monitor with Discord Alerts
 
+> **DEPRECATED — archive after this notice is merged.** This prototype equates ICMP reachability with host state and does not provide the debounce, durable state, restart semantics, or service-level checks required for dependable monitoring. History is preserved for transparency. The retained [Network Troubleshooting Toolkit](https://github.com/vxti-glitch/network-troubleshooting-toolkit) demonstrates the narrower DNS/ICMP/TCP evidence distinctions used in the active portfolio.
+
 [github.com/vxti-glitch](https://github.com/vxti-glitch)
 
 Pings a configurable list of hosts on a set interval and fires a Discord webhook alert the moment any host goes **down** or comes back **up**. All results are logged to a local CSV file for uptime records.
 
-Built as an extension of my [webhook integration case study](https://github.com/vxti-glitch/case-study-webhook-integration).
+This is a historical learning prototype; it is not retained as an uptime or incident-alerting system.
 
 ---
 
@@ -81,7 +83,7 @@ python -m unittest discover -s tests -v
 
 ## Help Desk / NOC relevance
 
-Automated uptime monitoring and alert routing are standard in NOC and Help Desk environments. Tools like PagerDuty, Nagios, and Zabbix do this at scale; this project demonstrates the same underlying logic (ping -> state-change detection -> webhook alert) implemented from scratch.
+This script demonstrates a basic `ping -> state change -> webhook` loop only. It is not equivalent to monitoring or incident-management platforms and must not be used to conclude that an application or service is down.
 
 **Skills:** Python · Network connectivity testing · Discord webhook API · Event-driven alerting · CSV logging
 
